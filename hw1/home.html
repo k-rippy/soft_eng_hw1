@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 18px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+.tab {
+    display: inline-block;
+    margin-left: 4em;
+}
+
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+<div class="sidebar">
+  <a class="active" href="home.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="poke/starters.html">Game I Made</a>
+</div>
+
+<span class="tab"><h1 style="font-size: 40px; color:#04AA6D">The Kevin Rippy Website</h1></span>
+<div class="content">
+  <p>
+    Hello there, feel free to explore the Me Website <br><br>
+    There are a couple places you can go, and you can click on them with the side bar <br>    
+  </p>
+
+  <h2 style="font-size:30px; color:orange">
+    <b>
+      <a href="poke/starters.html">
+        Game I Made
+      </a>
+    </b>
+  </h2>
+  <ul>
+    <li>I made this game a year or so ago, but it used Python Flask and MariaDB</li>
+    <li>I painstakingly edited the game to remove those dependencies, as well as adding a few features</li>
+    <li>This game uses pure html, css, and javascript</li>
+    <li>Enjoy!</li>
+  </ul>
+  <h2 style="font-size:30px; color:orange">
+    <b>
+      <a href="work.html">
+        Work
+      </a>
+    </b>
+  </h2>
+  <ul>
+    <li>Here I share some of my accomplishments</li>
+    <li>I have done a bit of research, and I have been working on my job for a couple years</li>
+    <li>So there's some cool stuff here</li>
+  </ul>
+  <img src="picture_of_me.jpg" alt="PICTURE OF ME"></img>
+</div>
+
+</body>
+</html>

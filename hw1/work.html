@@ -1,0 +1,208 @@
+<style>
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 18px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 100px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  .tab {
+      display: inline-block;
+      margin-left: 4em;
+  }
+     
+  body {
+     height: 100%;
+     overflow-y: hidden;
+  }
+
+  .holster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    font-family: monospace;
+  }
+
+  .container {
+    display: flex;
+    /*margin: 1em auto;
+    outline: 1px dashed lightgray;*/
+    flex: none;
+    overflow: auto;
+  }
+
+  .container.y {
+    position: absolute;
+    left: 15vw;
+    width: 85vw;
+    height: 98vh;
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+  }
+  
+  .y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+
+  .container > div {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+  }
+  
+  .y.container > div {
+    line-height: 256px;
+    font-size: 128px;
+    width: 85vw;
+    height: 98vh;
+  }
+  
+  /* appearance fixes */
+  .y.container > div:first-child {
+    line-height: 1.3;
+    font-size: 64px;
+  }
+  
+  /* coloration */
+  .container > div:nth-child(even) {
+    background-color: #303030;
+  }
+  .container > div:nth-child(odd) {
+    background-color: #202020;
+  }
+
+  .cards_image {
+    position: static;
+    top: 20vh;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  .news_vid {
+    position: static;
+    top: 20vh;
+    left: 50%;
+    height: 80vh;
+    width: 80vw;
+    object-fit: cover;
+  }
+
+  .sideways_txt {
+    transform: rotate(-90deg);
+  }
+
+  .gif_format {
+    width: 25vw;
+    height: auto;
+  } 
+
+  .table_div {
+    position: relative;
+  }
+
+</style>
+
+<body>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    
+  <div class="sidebar">
+    <a class="active" href="work.html">Work</a>
+    <a href="home.html">Home</a>
+    <a href="poke/starters.html">Game I Made</a>
+  </div>
+
+  <div class="holster">
+    <div class="container y mandatory-scroll-snapping" dir="ltr">
+      <div>
+        <h2 style="font-size:40px; color:orange"><b>
+          My Work At:
+        </b></h2>
+        <img class="cards_image" src="work/cards_pic.jpg" alt="CARDS PICTURE" ></img>
+      </div>
+      <div>
+        <h2 style="font-size:40px; color:orange"><b>
+          I was on the news:
+        </b></h2>
+        <iframe src="work/news_vid.mp4?" sandbox class="news_vid" title="CBS News">
+        </iframe>
+      </div>
+      <div>
+        <h2 style="font-size:30px; color:orange"><b>
+          My work is in melding natural gestures with robotic interphasing
+        </b></h2>
+        <aside style="float:left;position: sticky;">
+          <p style="line-height: 3;">
+            My work utalizes the hololens to retrieve the 3d coordinates of 26 joints in each hand. <br>
+            Using these coordinates, I run my custom categorization algorithms to determine what gesture command is being used,<br>
+            relates it to a movement command to send to the robot over either a ROS or SDK system. <br>
+          </p>
+        </aside>
+        <div class="table_div"><table>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <p style="font-size:20px"> MOVE FORWARD/BACKWARDS </p>
+            </td>
+            <td>
+              <p style="font-size:20px"> TURN LEFT/RIGHT </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="font-size:20px" class="sideways_txt"> TOUCH </p>
+            </td>
+            <td>
+              <img class="gif_format" src="work/touch_move.gif" alt="touch_move" ></img>
+            </td>
+            <td>
+              <img class="gif_format" src="work/touch_turn.gif" alt="touch_touch" ></img>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="font-size:20px" class="sideways_txt"> WHEEL </p>
+            </td>
+            <td>
+              <img class="gif_format" src="work/wheel_move.gif" alt="wheel_move" ></img>
+            </td>
+            <td>
+              <img class="gif_format" src="work/wheel_turn.gif" alt="wheel_turn" ></img>
+            </td>
+          </tr>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</body>
